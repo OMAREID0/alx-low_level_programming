@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 /*
- * main - print the alphabit in lowercase
- * followed by new line
- * Return: Always 0
+ * main - print the alphabit in lowercase followed by new line
+ * Return: Always 0 (Success) 
  */
 
 int main(void){
