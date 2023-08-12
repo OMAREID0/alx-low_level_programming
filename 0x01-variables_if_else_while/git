@@ -1,0 +1,5 @@
+#!/bin/bash
+git add .
+git commit -m "m"
+echo "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"
+git push
