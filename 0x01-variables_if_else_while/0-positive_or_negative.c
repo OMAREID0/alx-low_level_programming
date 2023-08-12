@@ -1,8 +1,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/*main - assigns randon number to n everytime
- * excutes and print it
+
+
+/*
+ * main - assigns randon number to n everytime excutes and print it
  * Return: always 0
  */
 
