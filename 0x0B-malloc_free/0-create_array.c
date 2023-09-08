@@ -1,25 +1,34 @@
-#include "main.h"
 #include <stdlib.h>
+#include "main.h"
 
-/*
- * create_array - function to creat an array of char with knowen size 
- *and replace the empate spaces with char c
- *@size - show how many unit will need to allocate.
- *@c -the char that will be overwritten
- *Return: return (NULL) if there is no free space and return array if it successful done
+/**
+ * *create_array - creates an array of chars,
+ * and initializes it with a specific char
+ * @size: size of the array to create
+ * @c: char to initialize the array c
+ *
+ * Return: pointer to the array (Success), NULL (Error)
  */
-
 char *create_array(unsigned int size, char c)
 {
-	unsigned int i;
-	char *s;
-	s =(char *) malloc(size * sizeof(char));
-	if ( size == 0 )
-		return NULL;
-	for(i = 0; i < size; ++i)
+	char *p;
+	unsigned int i = 0;
+
+	if (size == 0)
+		return (NULL);
+
+	p = (char *) malloc(sizeof(char) * size);
+
+	if (p == NULL)
+		return (0);
+
+	while (i < size)
 	{
-		s[i] = c;
+		*(p + i) = c;
+		i++;
 	}
-	s[i] = '\0';
-	return s;
+
+	*(p + i) = '\0';
+
+	return (p);
 }
