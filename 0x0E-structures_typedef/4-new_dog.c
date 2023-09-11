@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include "dog.h"
 
 /**
@@ -18,17 +18,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	copy = malloc(sizeof(dog_t));
 	if(new_dog == NULL || copy == NULL)
 		return NULL;
-	new_dog->name;
+	*new_dog->name;
 	new_dog->age;
-	new_dog->owner;
+	*new_dog->owner;
 
 	new_dog = copy;
 	return (new_dog);
-
-
-
-
-
-
-
 }
