@@ -5,11 +5,10 @@
  * @separator: use to separat betwen every int
  * @n: number of argument
  */
-
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-        va_list number;
         unsigned int i;
+	va_list number;
 
         va_start(number, n);
 
