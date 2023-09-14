@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "calc.h"
+#include "3-calc.h"
 
 //function to add two intger and return result//
 int op_add(int a, int b)
