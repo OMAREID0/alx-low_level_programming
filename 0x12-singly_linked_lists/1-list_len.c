@@ -1,5 +1,5 @@
+#include <stdlib.h>
 #include "lists.h"
-#include <stdio.h>
 
 /**
  * list_len - count number of nodes in the list
