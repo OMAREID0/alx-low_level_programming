@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 #include "lists.h"
 
 /**
@@ -11,21 +12,32 @@
 list_t *add_node_end(list_t **head, const char *str);
 {
 	unsigned int len = 0;
-	list_t *temp;
+	list_t *node;
+	list_t *temp = *head
 
-	temp = malloc(sizeof(list_t));
-	if (!temp)
+	node = malloc(sizeof(list_t));
+	if (!node)
 		return (NULL);
 	while (str[len])
 	{
 		len++;
 	}
 
-	temp->str = strdup(str);
-	temp->len = len;
-	temp->next = NULL;
-	(*head) = temp;
+	node->str = strdup(str);
+	node->len = len;
+	node->next = NULL;
 
-	return ((*head));
+	if (temp == NULL)
+	{
+		*head = node;
+		return (*head);
+	}
+
+	while (temp->next)
+	{
+		temp = temp->next;
+	}
+	temp = node;
+	return (node);
 }
 
