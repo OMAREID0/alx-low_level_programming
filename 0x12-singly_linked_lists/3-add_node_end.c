@@ -9,7 +9,7 @@
  *
  * Return: return pointer to the node
  */
-list_t *add_node_end(list_t **head, const char *str);
+list_t *add_node_end(list_t **head, const char *str)
 {
 	unsigned int len = 0;
 	list_t *node;
