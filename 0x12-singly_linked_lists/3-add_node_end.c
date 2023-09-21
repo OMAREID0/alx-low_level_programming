@@ -1,15 +1,14 @@
 #include <stdlib.h>
-#include <string.h>
 #include "lists.h"
 
 /**
- * add_node - add node t the start of list
- * @head: pointer of pointer pointing to node
- * @str: string to add to the node
+ * add_node_end - add a node in the end of list
+ * @head: pointer to pointer pointing to node
+ * @str: string to add in the node
  *
  * Return: return pointer to the node
  */
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str);
 {
 	unsigned int len = 0;
 	list_t *temp;
@@ -24,8 +23,9 @@ list_t *add_node(list_t **head, const char *str)
 
 	temp->str = strdup(str);
 	temp->len = len;
-	temp->next = (*head);
+	temp->next = NULL;
 	(*head) = temp;
 
 	return ((*head));
 }
+
