@@ -8,22 +8,23 @@
  */
 size_t print_list(const list_t *h)
 {
-	size_t counter = 0;
-	char *string;
-	list_t *ptr;
-
-	ptr = malloc(sizeof(list_t));
+	int counter = 0;
+	if (h == NULL)
+		return (0);
+	
+	list_t *ptr = malloc(sizeof(list_t));
+	
 	ptr = h;
 	while (prtr != NULL)
 	{
 		counter++;
 		ptr = ptr->next;
-		string = ptr ->str;
+
 		if (str != NULL)
-			printf("[%i] %s", counter, string);
+			printf("[%i] %s\n", ptr->len, ptr->str);
 		else
 		{
-			printf("[0] (nil)");
+			printf("[%u] %s\n", ptr->len, "(nil)" );
 		}
 	}
 	return (counter);
