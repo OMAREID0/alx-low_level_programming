@@ -1,4 +1,4 @@
-#define "lists.h"
+#include "lists.h"
 
 /**
  * print_listint - print elements of list
