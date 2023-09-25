@@ -1,3 +1,4 @@
+#define <stdio.h>
 #define "lists.h"
 
 /**
@@ -10,7 +11,7 @@ size_t print_listint(const listint_t *h)
 {
 	size_t count;
 
-	while (h != NULL)
+	while (!h)
 	{
 		printf("%d", h->n);
 		h = h->next;
