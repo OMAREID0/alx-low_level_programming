@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -9,13 +8,13 @@ void free_listint(listint_t *head)
 {
 	list_t *temp;
 
+	if (head == NULL)
+		return;
 	while (head)
 	{
-		temp = head->next;
-		free(head->n);
-		free(head);
-		head = temp;
+		temp = (*head)->next;
+		free(*head);
+		*head = temp;
 	}
-	head = NULL;
+	*head = NULL;
 }
-
