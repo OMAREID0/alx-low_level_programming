@@ -23,7 +23,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
-
 	for (i = index; ht->array[i]; i++)
 	{
 		if (strcmp(ht->array[i]->key, key) == 0)
@@ -35,14 +34,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 
 	new = malloc(sizeof(hash_node_t));
-
 	if (new == NULL)
 	{
 		free(value_copy);
 		return (0);
 	}
 	new->key = strdup(key);
-
 	if (new->key == NULL)
 	{
 		free(new);
